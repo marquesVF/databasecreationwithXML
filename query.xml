@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="marketX">
+	<table name="beverage">
+		<column name="ProductName" type="string">
+			<row>Beer</row>
+			<row>Soda</row>
+			<row>Rice</row>
+		</column>
+		<column name="Price" type="float">
+			<row>2.5</row>
+			<row>3.5</row>
+			<row>4.0</row>
+		</column>
+	</table>
+	<table name="user">
+		<column name="Name" type="string">
+			<row>John</row>
+		</column>
+		<column name="Email" type="string">
+			<row>john.2@mail.com</row>
+		</column>
+	</table>
+	<table name="buy" dependencies="beverage user">
+		<column name="BeverageID" type="foreignkey" reference="beverage"></column>
+		<column name="UserID" type="foreignkey" reference="user"></column>
+		<column name="Date" type="string"></column>
+	</table>
+</database>
