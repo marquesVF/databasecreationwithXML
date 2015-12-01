@@ -1,0 +1,11 @@
+<!ELEMENT database (table+)>
+<!ELEMENT table (column+)>
+<!ELEMENT column (row+)>
+<!ELEMENT row (CDATA)>
+
+<!ATTLIST database name CDATA #REQUIRED>
+<!ATTLIST table name CDATA #REQUIRED>
+<!ATTLIST table dependencies CDATA #IMPLIED>
+<!ATTLIST column name CDATA #REQUIRED>
+<!ATTLIST column type CDATA #REQUIRED>
+<!ATTLIST column reference CDATA #IMPLIED>
